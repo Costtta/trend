@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
-        <Route path="/" element={<Register />} />
+        <Route path="/trend" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path='/shop' element={<CategoryLivingRoom />} />
