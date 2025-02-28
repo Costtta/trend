@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/trend/static/css/main.91859b81.css",
+    "main.js": "/trend/static/js/main.8533ce72.js",
+    "static/media/dreams.webp": "/trend/static/media/dreams.ea97d378512e452fc07a.webp",
+    "static/media/search-left.webp": "/trend/static/media/search-left.23a60ceb88163de8a7fe.webp",
+    "static/media/search-right.webp": "/trend/static/media/search-right.7d7d66444833c1d8c0d4.webp",
+    "static/media/webp": "/trend/static/media/6b24d16c8f8b19fedc2930332e924ae3.fe6723826cd6b3acb5a7.webp",
+    "static/media/features3.webp": "/trend/static/media/features3.f089665e615f9eefbf12.webp",
+    "static/media/features1.webp": "/trend/static/media/features1.0ca7601aee660d845824.webp",
+    "static/media/features2.webp": "/trend/static/media/features2.b45431bcf40744cea222.webp",
+    "static/media/Ballons.webp": "/trend/static/media/Ballons.7aee1a63609800ff32d5.webp",
+    "static/media/search-bg-orange-left.webp": "/trend/static/media/search-bg-orange-left.9dffd3e797479fb0d40e.webp",
+    "static/media/leftOrangeBg.webp": "/trend/static/media/leftOrangeBg.df86cebd54a3804fb849.webp",
+    "static/media/rightOrangeBg.webp": "/trend/static/media/rightOrangeBg.96df5ba43e93be44acfb.webp",
+    "static/media/search-bg.webp": "/trend/static/media/search-bg.df241ce30e1a61349450.webp",
+    "static/media/centerOrangeBg.webp": "/trend/static/media/centerOrangeBg.e7fb75f83b72e299d9d4.webp",
+    "static/media/cart-bg.webp": "/trend/static/media/cart-bg.3e0c0237fff8f4d1b85f.webp",
+    "index.html": "/trend/index.html",
+    "static/media/Mastercard logo.webp": "/trend/static/media/Mastercard logo.b9e53d80dc5dfebc5722.webp",
+    "static/media/Paypal.webp": "/trend/static/media/Paypal.dd1390607591fced7290.webp",
+    "static/media/visa logo.webp": "/trend/static/media/visa logo.27d5511890a154f797e1.webp",
+    "static/media/En.webp": "/trend/static/media/En.ebc080cfb4508205a4f4.webp",
+    "main.91859b81.css.map": "/trend/static/css/main.91859b81.css.map",
+    "main.8533ce72.js.map": "/trend/static/js/main.8533ce72.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91859b81.css",
+    "static/js/main.8533ce72.js"
+  ]
+}
