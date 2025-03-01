@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit'
-import  testSlice  from './testSlice'
 import categoriesSlice from './categoriesSlice'
 import productsSlice from './productSlice'
 import themeSlice from './themeSlice'
@@ -9,7 +8,6 @@ import signUpSlice from './signUpSlice'
 
 export const store = configureStore({
     reducer: {
-        test: testSlice,
         categories: categoriesSlice,
         products: productsSlice,
         themeMode: themeSlice,

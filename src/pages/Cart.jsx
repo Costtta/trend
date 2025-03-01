@@ -11,7 +11,6 @@ import { Link } from 'react-router'
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)
-    console.log(cart);
 
 
     const dispatch = useDispatch()
@@ -64,7 +63,7 @@ const Cart = () => {
                                                 <IconButton onClick={() => dispatch(decrementQuantity(index))}>
                                                     <RemoveCircleIcon />
                                                 </IconButton>
-                                                <Typography>01</Typography>
+                                                <Typography>{index.quantity}</Typography>
                                                 <IconButton onClick={() => dispatch(incrementQuantity(index))}>
                                                     <AddCircleIcon />
                                                 </IconButton>

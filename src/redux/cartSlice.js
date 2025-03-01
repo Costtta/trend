@@ -19,7 +19,13 @@ const cartSlice = createSlice({
     name: 'cartSlice',
     reducers: {
         addToCart: (state, action) => {
-            state.items.push(action.payload)
+            const findProduct = state.items.find((product) => product.id === action.payload.id);
+            if(findProduct){
+                findProduct.quantity += 1
+            } else{
+                const productClone = {...action.payload, quantity: 1}
+                state.items.push(productClone)
+            }
         },
         deleteBtn: (state, action) => {
             const indexToRemove = state.items.findIndex(item => item.id === action.payload.id);
@@ -36,7 +42,7 @@ const cartSlice = createSlice({
             state.items = []
         },
         totalPrice: (state) => {
-            state.total = state.items.reduce((acc, item) => acc + parseFloat(item.price), 0)
+            state.total = state.items.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0)
         },
         incrementQuantity: (state, action) => {
             const item = state.items.find((item) => item.id === action.payload.id);
