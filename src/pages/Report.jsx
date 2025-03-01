@@ -24,7 +24,7 @@ const Report = () => {
                                 return (
                                     <>
                                         <Box display={'flex'} key={index.id} padding={'1rem'}>
-                                            <img src={`http://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0]?.link}`} alt={index.title} width={'135px'} height={'135px'} style={{ padding: '5px 12px', backgroundColor: theme.palette.common.white, borderRadius: '20px' }} />
+                                            <img src={`https://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0]?.link}`} alt={index.title} width={'135px'} height={'135px'} style={{ padding: '5px 12px', backgroundColor: theme.palette.common.white, borderRadius: '20px' }} />
                                             <Box>
                                                 <Typography>{index.title}</Typography>
                                                 <Typography>About the Chair</Typography>

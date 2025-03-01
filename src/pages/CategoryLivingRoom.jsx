@@ -62,7 +62,7 @@ const CategoryLivingRoom = () => {
                             return (
                                 <Grid2 size={{ md: 3, xs: 6 }} key={index.id}>
                                     <Card variant="0">
-                                        <CardMedia component={'img'} image={`http://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0].link}`} width={'100%'} sx={{ backgroundColor: theme.palette.grey[500] }} />
+                                        <CardMedia component={'img'} image={`https://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0].link}`} width={'100%'} sx={{ backgroundColor: theme.palette.grey[500] }} />
                                         <CardContent>
                                             <Typography fontSize={{ md: 21.33, xs: 13.96 }} fontWeight={600}>{index.title}</Typography>
                                         </CardContent>

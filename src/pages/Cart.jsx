@@ -49,7 +49,7 @@ const Cart = () => {
                                 return (
                                     <Grid2 container justifyContent={'space-between'} alignItems={'center'} key={index.id} padding={'0 1rem'}>
                                         <Grid2>
-                                            <img src={`http://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0]?.link}`} height={'135px'} width={'135px'} alt="test" style={{ backgroundColor: theme.palette.grey[500], borderRadius: '26px', padding: '5px 12px' }} />
+                                            <img src={`https://test-ecomerce.xn--hrt-w-ova.de/${index.productimage[0]?.link}`} height={'135px'} width={'135px'} alt="test" style={{ backgroundColor: theme.palette.grey[500], borderRadius: '26px', padding: '5px 12px' }} />
                                         </Grid2>
                                         <Grid2>
                                             <Typography fontWeight={'500'}>{index.title}</Typography>
