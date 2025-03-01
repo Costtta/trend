@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/trend/static/css/main.91859b81.css",
-    "main.js": "/trend/static/js/main.202d7711.js",
+    "main.css": "/trend/static/css/main.2471f9b9.css",
+    "main.js": "/trend/static/js/main.2543518e.js",
     "static/media/dreams.webp": "/trend/static/media/dreams.ea97d378512e452fc07a.webp",
     "static/media/search-left.webp": "/trend/static/media/search-left.23a60ceb88163de8a7fe.webp",
     "static/media/search-right.webp": "/trend/static/media/search-right.7d7d66444833c1d8c0d4.webp",
@@ -21,11 +21,11 @@
     "static/media/Paypal.webp": "/trend/static/media/Paypal.dd1390607591fced7290.webp",
     "static/media/visa logo.webp": "/trend/static/media/visa logo.27d5511890a154f797e1.webp",
     "static/media/En.webp": "/trend/static/media/En.ebc080cfb4508205a4f4.webp",
-    "main.91859b81.css.map": "/trend/static/css/main.91859b81.css.map",
-    "main.202d7711.js.map": "/trend/static/js/main.202d7711.js.map"
+    "main.2471f9b9.css.map": "/trend/static/css/main.2471f9b9.css.map",
+    "main.2543518e.js.map": "/trend/static/js/main.2543518e.js.map"
   },
   "entrypoints": [
-    "static/css/main.91859b81.css",
-    "static/js/main.202d7711.js"
+    "static/css/main.2471f9b9.css",
+    "static/js/main.2543518e.js"
   ]
 }
