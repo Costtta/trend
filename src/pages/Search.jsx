@@ -1,11 +1,9 @@
 import { Box, Container, Grid2, Input, InputAdornment, Typography, useTheme } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
-import {lightTheme} from "../mui/theme";
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import rightSearch from '../assets/search-right.webp'
 import leftSearch from '../assets/search-left.webp'
-import bgOrange from '../assets/search-bg.webp'
 import NavBarPhoneSearch from "../components/NavBarPhoneSearch";
 
 const Search = () => {

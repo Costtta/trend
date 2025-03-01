@@ -1,9 +1,8 @@
-import { AppBar, IconButton, Toolbar, Typography, useTheme } from "@mui/material";
+import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router";
 
 const NavBarPhoneSearch = () => {
-    const theme = useTheme();
     const navigate = useNavigate()
 
     // handle home

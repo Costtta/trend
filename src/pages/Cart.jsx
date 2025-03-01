@@ -2,35 +2,38 @@ import { Box, Button, Container, Divider, Grid2, IconButton, Typography, useThem
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { useDispatch, useSelector } from 'react-redux'
-import test from '../assets/Ballons.webp'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { useEffect } from 'react'
-import { deleteBtn, fetchCartItems, totalPrice } from '../redux/cartSlice'
+import { decrementQuantity, deleteBtn, fetchCartItems, incrementQuantity, totalPrice } from '../redux/cartSlice'
 import { Link } from 'react-router'
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)
-    const dispatch = useDispatch()
-    const handleTotalPrice = () => {
-        dispatch(totalPrice())
-    }
     console.log(cart);
 
-    handleTotalPrice()
+
+    const dispatch = useDispatch()
+
 
     useEffect(() => {
-        dispatch(fetchCartItems())
-    }, [])
+        dispatch(totalPrice())
+    }, [cart.items])
 
-
+    useEffect(() => {
+        dispatch(fetchCartItems());
+    }, [dispatch]);
     const theme = useTheme();
-    console.log(cart);
 
     return (
         <>
+            {/* navbar */}
+
             <NavBar />
+
+            {/* cart section */}
+
             <Box component={'section'} paddingBlock={'60px'}>
                 <Container>
                     <Box textAlign={'center'} position={'relative'} className='cart-bg'>
@@ -40,6 +43,9 @@ const Cart = () => {
                     </Box>
                     <Box>
                         <Box maxHeight={'727px'} overflow={'auto'} className='custom-scrollbar'>
+
+                            {/* products looping  */}
+
                             {cart.items.map((index) => {
                                 return (
                                     <Grid2 container justifyContent={'space-between'} alignItems={'center'} key={index.id} padding={'0 1rem'}>
@@ -51,13 +57,17 @@ const Cart = () => {
                                             <Typography>About the Chair</Typography>
                                         </Grid2>
                                         <Grid2 display={'flex'} alignItems={'center'}>
-                                            <IconButton onClick={() => dispatch(deleteBtn(index))}  sx={{color: theme.palette.common.black}}>
+                                            <IconButton onClick={() => dispatch(deleteBtn(index))} sx={{ color: theme.palette.common.black }}>
                                                 <RiDeleteBin6Line cursor={'pointer'} />
                                             </IconButton>
-                                            <Box display={'flex'}>
-                                                <RemoveCircleIcon sx={{ cursor: 'pointer' }} />
+                                            <Box display={'flex'} alignItems={'center'}>
+                                                <IconButton onClick={() => dispatch(decrementQuantity(index))}>
+                                                    <RemoveCircleIcon />
+                                                </IconButton>
                                                 <Typography>01</Typography>
-                                                <AddCircleIcon sx={{ cursor: 'pointer' }} />
+                                                <IconButton onClick={() => dispatch(incrementQuantity(index))}>
+                                                    <AddCircleIcon />
+                                                </IconButton>
                                             </Box>
                                         </Grid2>
                                         <Grid2>
@@ -70,7 +80,6 @@ const Cart = () => {
                                 )
                             })}
                         </Box>
-                        {/* title below it para */}
                         {/* quantatity with decrease and incresse numbers */}
                         {/* below alld of that hidden bg for box shadow */}
                         <Divider />
@@ -79,7 +88,7 @@ const Cart = () => {
                             <Typography>{cart.total}€</Typography>
                         </Box>
                         <Button variant='contained' color='warning' sx={{ color: 'black', textTransform: 'capitalize', width: '100%', borderRadius: '58px' }}>
-                            <Link to={cart.items.length === 0 ? '/' : '/data'} style={{ color: theme.palette.common.black, textDecoration: 'none', width: '100%', fontWeight: 'bold' }}>Place order</Link>
+                            <Link to={cart.items.length === 0 ? '/trend' : '/data'} style={{ color: theme.palette.common.black, textDecoration: 'none', width: '100%', fontWeight: 'bold' }}>Place order</Link>
                         </Button>
                     </Box>
                 </Container>

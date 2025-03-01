@@ -1,7 +1,6 @@
 /* general start */
 
 .custom-scrollbar::-webkit-scrollbar {
-    /* background-color: transparent; */
     width: 5px;
     border-radius: 20px;
 }
@@ -11,48 +10,6 @@
     border-radius: 20px;
 }
 
-/* mui adjustment */
-
-/* navbar mobile screen menulist */
-
-.css-10ii2cr-MuiGrid2-root>* {
-    padding: 0 !important;
-}
-
-/* stepper */
-
-.css-1e4q4jt-MuiStepLabel-label.Mui-active {
-    color: black !important;
-}
-
-.css-1e4q4jt-MuiStepLabel-label.Mui-completed {
-    color: black !important;
-}
-
-/* tabs in small screen */
-
-.css-myd0xe-MuiButtonBase-root-MuiTab-root,
-.css-47nr39-MuiButtonBase-root-MuiTab-root {
-    text-transform: capitalize !important;
-}
-
-/* tabs in small screen selected*/
-
-.css-47nr39-MuiButtonBase-root-MuiTab-root.Mui-selected,
-.css-myd0xe-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #E58411 !important;
-    background-color: #FCEFE0;
-    font-weight: bold;
-    text-transform: capitalize;
-    z-index: -1;
-}
-
-/* indicator */
-
-.css-1qltlow-MuiTabs-indicator {
-    background-color: #E58411 !important;
-    z-index: -1;
-}
 
 /* general end */
 

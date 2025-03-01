@@ -1,13 +1,9 @@
 import {
     AppBar,
-    Badge,
-    Button,
     ClickAwayListener,
-    colors,
     Container,
     Grid2,
     Grow,
-    IconButton,
     Input,
     InputAdornment,
     List,
@@ -19,7 +15,6 @@ import {
     MenuList,
     Paper,
     Popper,
-    TextField,
     Toolbar,
     Typography,
     useTheme,
@@ -27,15 +22,14 @@ import {
 import { BsHandbagFill } from "react-icons/bs";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { darkTheme, lightTheme, StyledBadge } from "../mui/theme";
+import { StyledBadge } from "../mui/theme";
 import { BiSearchAlt } from "react-icons/bi";
 import En from "../assets/En.webp";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, NavLink, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../redux/themeSlice";
-import { CarRepairTwoTone } from "@mui/icons-material";
 
 const NavBar = () => {
 
@@ -76,10 +70,6 @@ const NavBar = () => {
         }
     }
 
-    const routingHome = () => {
-        return <NavLink to={"/home"} />;
-    };
-
     const navigate = useNavigate()
 
     // handle search
@@ -87,7 +77,6 @@ const NavBar = () => {
         navigate('/search')
     }
 
-    // return focus to the button when we transitioned from !open -> open
     const prevOpen = useRef(open);
     useEffect(() => {
         if (prevOpen.current === true && open === false) {
@@ -188,45 +177,15 @@ const NavBar = () => {
                                 <ListItem
                                     sx={{ padding: 0, display: { md: "flex", xs: "none" } }}
                                 >
-                                    {/* test start */}
+                                    {/* search input start */}
+
                                     <Input endAdornment={
                                         <InputAdornment position="end">
                                             <BiSearchAlt cursor={"pointer"} size={"20px"} onClick={handleSearch}/>
                                         </InputAdornment>} 
                                         sx={{'&::after': {borderBottom: `0px`}, '&::before' : {borderBottom: `0px`}, backgroundColor: theme.palette.grey[700], borderRadius: '19.5px', '& .MuiInputBase-input::placeholder': {fontSize: '15px'}, px: 0.5}} placeholder="Search"/>
-                                    {/* test end */}
-                                    {/* <TextField
-                                        sx={{
-                                            "& .MuiOutlinedInput-notchedOutline": {
-                                                borderColor: "transparent",
-                                                borderRadius: "19.5px",
-                                                padding: 0,
-                                            },
-                                            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                                                borderColor: "transparent",
-                                                padding: 0,
-                                            },
-                                            "&:hover .MuiOutlinedInput-notchedOutline": {
-                                                borderColor: "transparent",
-                                                padding: 0,
-                                            },
-                                            width: "170px",
-                                            height: "39px",
-                                            backgroundColor: "#FDFDFD",
-                                            justifyContent: "center",
-                                            borderRadius: "19.5px",
-                                            padding: 0,
-                                        }}
-                                        slotProps={{
-                                            input: {
-                                                endAdornment: (
-                                                    <InputAdornment>
-                                                        <BiSearchAlt cursor={"pointer"} size={"20px"} />
-                                                    </InputAdornment>
-                                                ),
-                                            },
-                                        }}
-                                    /> */}
+
+                                    {/* search input end */}
                                 </ListItem>
                                 <ListItem sx={{ padding: 0, width: "fit-content" }}>
                                     <ListItemButton sx={{ padding: 0 }}>
@@ -239,7 +198,7 @@ const NavBar = () => {
                                                 }}
                                             >
                                                 <StyledBadge
-                                                    badgeContent={cart == 0 ? '0' : cart}
+                                                    badgeContent={cart === 0 ? '0' : cart}
                                                     color="warning"
                                                     sx={{ color: theme.palette.common.black }}
                                                 >

@@ -45,11 +45,36 @@ const Register = () => {
 
             {/* small screen */}
 
-            <Container sx={{display: { md: 'none', xs: 'block' }}}>
+            <Container sx={{ display: { md: 'none', xs: 'block' } }}>
                 <Box sx={{ width: '100%' }} >
-                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                        <Tab label="Sign In" {...a11yProps(0)} sx={{flexGrow: 1}} />
-                        <Tab label="Sign Up" {...a11yProps(1)} sx={{flexGrow: 1, color: '', fontWeight: '400'}} />
+                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{
+                        '& .MuiTabs-indicator': {
+                            backgroundColor: '#E58411',
+                            zIndex: -1,
+                        },
+                    }}>
+                        <Tab label="Sign In" {...a11yProps(0)} sx={{
+                            flexGrow: 1,
+                            textTransform: 'capitalize',
+                            '&.Mui-selected': {
+                                color: '#E58411',
+                                backgroundColor: '#FCEFE0',
+                                fontWeight: 'bold',
+                                zIndex: -1,
+                            },
+                        }} />
+                        <Tab label="Sign Up" {...a11yProps(1)} sx={{
+                            flexGrow: 1,
+                            color: '',
+                            fontWeight: '400',
+                            textTransform: 'capitalize',
+                            '&.Mui-selected': {
+                                color: '#E58411',
+                                backgroundColor: '#FCEFE0',
+                                fontWeight: 'bold',
+                                zIndex: -1,
+                            },
+                        }} />
                     </Tabs>
                     <Box textAlign={'center'} paddingTop={5}>
                         <Typography variant='h1' fontWeight={'bold'} fontSize={{ md: 58, xs: 36 }} marginBottom={'1rem'}>Welcome to Our store</Typography>
@@ -65,7 +90,7 @@ const Register = () => {
             </Container>
             {/* large screen */}
 
-            <Container fixed sx={{display: { md: 'block', xs: 'none' }}}>
+            <Container fixed sx={{ display: { md: 'block', xs: 'none' } }}>
                 <Box textAlign={'center'} paddingTop={5}>
                     <Typography variant='h1' fontWeight={'bold'} fontSize={{ md: 58, xs: 36 }} marginBottom={'1rem'}>Welcome to Our store</Typography>
                     <Typography fontSize={{ md: 20, xs: 16 }}>Bringing Your Style Home</Typography>

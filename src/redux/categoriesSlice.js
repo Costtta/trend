@@ -12,18 +12,25 @@ export const fetchCategories = createAsyncThunk('categoriesSlice/fetchCategories
 })
 
 export const categoriesSlice = createSlice({
-    initialState: [],
+    initialState: {
+        fetchData: [],
+        isLoading: false,
+        error: null
+    },
     name: 'categoriesSlice',
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(fetchCategories.fulfilled, (state, action) => {
-            return state = action.payload.data
+        builder.addCase(fetchCategories.pending, (state) => {
+            state.isLoading = true
+            state.error = null
         })
-        builder.addCase(fetchCategories.pending, (state, action) => {
-            return state = ['Loading']
+        builder.addCase(fetchCategories.fulfilled, (state, action) => {
+            state.isLoading = false
+            state.fetchData = action.payload.data
         })
         builder.addCase(fetchCategories.rejected, (state, action) => {
-            return state = ['Fetching is Rejected']
+            state.isLoading = false
+            state.error = action.error.message
         })
     }
 })

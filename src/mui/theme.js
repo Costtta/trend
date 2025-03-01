@@ -37,7 +37,7 @@ export const lightTheme = createTheme({
             styleOverrides: {
                 label: {
                     fontSize: '10px',
-                    color: 'black', // Added black text color
+                    color: 'black',
                 },
             },
         },
@@ -45,22 +45,19 @@ export const lightTheme = createTheme({
             styleOverrides: {
                 root: {
                     fontSize: '20px',
-                    color: '', // Make the icon transparent
+                    color: '',
                     border: '1px solid black',
-                    borderRadius: '50%', // Make it a circle
-                },
-                completed: {
-                    color: 'black', // Ensure completed is also transparent
+                    borderRadius: '50%', 
                 },
                 text: {
                     fill: 'black'
                 }
             },
         },
-        MuiStepConnector: { // Target the StepConnector
+        MuiStepConnector: {
             styleOverrides: {
                 line: {
-                    color: 'red', // Change the connector color here
+                    color: 'red', 
                 },
             },
         },
@@ -102,7 +99,7 @@ export const darkTheme = createTheme({
             styleOverrides: {
                 label: {
                     fontSize: '10px',
-                    color: 'black', // Added black text color
+                    color: 'black',
                 },
             },
         },
@@ -111,10 +108,7 @@ export const darkTheme = createTheme({
                 root: {
                     fontSize: '20px',
                     border: '1px solid black',
-                    borderRadius: '50%', // Make it a circle
-                },
-                completed: {
-                    color: 'black'
+                    borderRadius: '50%',
                 },
                 text: {
                     fill: 'black'

@@ -1,15 +1,9 @@
-import { Box, Button, Container, Grid2, IconButton, InputAdornment, OutlinedInput, TextField, Typography, useTheme } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import { Box, Button, Grid2, TextField, Typography, useTheme } from '@mui/material';
+import React, { useState } from 'react'
 import LockIcon from '@mui/icons-material/Lock';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import CircleIcon from '@mui/icons-material/Circle';
-import { FcGoogle } from "react-icons/fc";
-import leftOrangeBg from '../assets/leftOrangeBg.webp'
-import rightOrangeBg from '../assets/rightOrangeBg.webp'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSignIn } from '../redux/signInSlice';
-import { fetchSignUp } from '../redux/signUpSlice';
 
 
 const SignIn = () => {
@@ -21,7 +15,6 @@ const SignIn = () => {
         e.preventDefault();
         dispatch(fetchSignIn({ email, password }))
     }
-    // console.log(data);
 
 
     const theme = useTheme()

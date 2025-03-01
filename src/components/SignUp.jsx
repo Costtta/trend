@@ -22,7 +22,7 @@ const SignUp = () => {
         e.preventDefault()
         dispatch(fetchSignUp({name, lastname, password, email}))
     }
-    console.log(data2);
+    
     return (
         <Grid2 size={{ md: 6, xs: 12 }} bgcolor={theme.palette.grey[500]} paddingTop={4.5} marginBottom={4.5}>
             <Box textAlign={'center'}>

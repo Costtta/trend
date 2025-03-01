@@ -27,14 +27,28 @@ const cartSlice = createSlice({
             if (indexToRemove !== -1) {
                 const newItems = [...state.items];
                 newItems.splice(indexToRemove, 1);
-
                 // Update the state
                 state.items = newItems;
             }
         },
-        clearAll: () => { },
+        clearAll: (state) => {
+            // there is no delete all cart in the design to dispatch it
+            state.items = []
+        },
         totalPrice: (state) => {
             state.total = state.items.reduce((acc, item) => acc + parseFloat(item.price), 0)
+        },
+        incrementQuantity: (state, action) => {
+            const item = state.items.find((item) => item.id === action.payload.id);
+            if (item) {
+                item.quantity += 1;
+            }
+        },
+        decrementQuantity: (state, action) => {
+            const item = state.items.find((item) => item.id === action.payload.id);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+            }
         }
     },
     extraReducers: (builder) => {
@@ -54,5 +68,10 @@ const cartSlice = createSlice({
 }
 )
 
-export const { addToCart, deleteBtn, clearAll, totalPrice } = cartSlice.actions
+export const { addToCart, deleteBtn, clearAll, totalPrice, incrementQuantity, decrementQuantity } = cartSlice.actions;
+
+
+
+
+
 export default cartSlice.reducer;

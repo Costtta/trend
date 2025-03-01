@@ -9,7 +9,6 @@ const Categories = () => {
     const theme = useTheme()
     const categories = useSelector(state => state.categories)
     const dispatch = useDispatch()
-    console.log(categories);
     
     useEffect(() => {
         dispatch(fetchCategories())
@@ -22,7 +21,7 @@ const Categories = () => {
                     <Grid2 size={{md: 3, xs: 12}} display={'flex'} alignItems={'end'}>
                         <Typography variant="h2" fontSize={42} fontWeight={'bold'} paddingBottom={8}>Our Categories</Typography>
                     </Grid2>
-                        {categories.map((index) => {
+                        {categories.fetchData.map((index) => {
                             return(
                                 <Grid2 size={{md: 3, xs: 12}} key={index.id}>
                                     <Card sx={{maxWidth: 345}} variant="0">
