@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchSignIn = createAsyncThunk('signInSlice/fetchSignIn', async ({email, password}) => {
-    const res = await fetch('http://test-ecomerce.hrt-wü.de/api/login', {
+    const res = await fetch('https://test-ecomerce.hrt-wü.de/api/login', {
         method: 'POST',
         headers: {
             "Accept-Language": 'ar',

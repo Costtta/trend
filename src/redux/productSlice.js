@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchProducts = createAsyncThunk('productSlice/fetchProducts', async () => {
-    const res = await fetch('http://test-ecomerce.xn--hrt-w-ova.de/api/product/get', {
+    const res = await fetch('https://test-ecomerce.xn--hrt-w-ova.de/api/product/get', {
         method: 'GET',
         headers: {
             'Accept-Language': 'En',

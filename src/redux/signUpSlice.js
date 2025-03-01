@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchSignUp = createAsyncThunk('signUpSlice/fetchSignUp', async ({ name, lastname, emailUp, passwordUp }) => {
-    const res = await fetch('http://test-ecomerce.hrt-wü.de/api/register', {
+    const res = await fetch('https://test-ecomerce.hrt-wü.de/api/register', {
         method: 'POST',
         headers: {
             "Accept-Language": "ar",

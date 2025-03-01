@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchCartItems = createAsyncThunk('cartSlice/fetchCartItems', async () => {
-    const res = await fetch('http://test-ecomerce.xn--hrt-w-ova.de/api/cart/add-item', {
+    const res = await fetch('https://test-ecomerce.xn--hrt-w-ova.de/api/cart/add-item', {
         method: 'POST'
     });
     const data = res.json();
