@@ -28,7 +28,7 @@ const Categories = () => {
                                         <CardMedia image={`https://test-ecomerce.xn--hrt-w-ova.de/${index.image}`} alt='Categories' sx={{borderRadius: '23px'}} width={'277px'} height={'267px'} component={'img'} />
                                         <CardContent>
                                             <Typography fontSize={24} variant="h5" fontWeight={'bold'}>{index.title}</Typography>
-                                            <Typography lineHeight={'29.6px'} sx={{color: '#1E1E1E'}} fontSize={16} paddingTop={'1.5rem'}>{index.description}</Typography>
+                                            <Typography lineHeight={'29.6px'} sx={{color: ''}} fontSize={16} paddingTop={'1.5rem'}>{index.description}</Typography>
                                         </CardContent>
                                         <CardActions sx={{color: theme.palette.warning.main}}>
                                             <Button sx={{textTransform: 'capitalize', color: theme.palette.warning.main, fontSize: '14px'}} endIcon={<TrendingFlatIcon />}>more info</Button>

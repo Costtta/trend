@@ -49,7 +49,7 @@ const CategoryLivingRoom = () => {
 
                             {/* endpoint category img doesn't have width and height like the design */}
 
-                            <img src={`http://test-ecomerce.xn--hrt-w-ova.de/${categoryImage}`} alt="living-room" width={'100%'} />
+                            <img src={`https://test-ecomerce.xn--hrt-w-ova.de/${categoryImage}`} alt="living-room" width={'100%'} />
                             
                         </Grid2>
                     </Grid2>
